@@ -16,7 +16,7 @@ struct PersonDetailsView: View {
         viewModel = PersonViewModel(service: FMPService(), personId: person.id ?? "_")
     }
     
-    // Experiment
+    // TODO: WIP - Experiment to connect each PersonCard and relatioships
     fileprivate func drawRelationshipLines() -> some View {
         return VStack(alignment: .center, spacing: 0) {
             Spacer(minLength: 200)
@@ -29,37 +29,34 @@ struct PersonDetailsView: View {
     }
     
     var body: some View {
-        
         switch viewModel.state {
         case .loading: Text("Loading")
         case .failed(_):
-            Text("can not find relationship")
+            Text("Can not find relationship for \(person.fullName)")
         case .success:
             if let relationships = viewModel.person.relationships {
                 ScrollView(.vertical, showsIndicators: false) {
-                    
-                    
                     VStack(alignment: .center, spacing: 30) {
                         
                         // Father - Mother
                         HStack(alignment: .center, spacing: 30) {
                             PersonCardView(profileId: relationships.father ?? "Noid",relationshipTitle: "FATHER")
                             
-                           // drawRelationshipLines()
+                           //drawRelationshipLines()
 
                             PersonCardView(profileId: relationships.mother ?? "Noid", relationshipTitle: "MOTHER")
                         }
+                        
                         Spacer(minLength: 10)
                         
-                        
                         // Main - Spouse
-                        HStack(alignment: .center, spacing: 50){
+                        HStack(alignment: .center, spacing: 30){
                             // pass isSelected - TRUE for Main Person - Whos tree we are watching
                             PersonCardView(profileId: person.id ?? "_", isSelected: true)
                             PersonCardView(profileId: relationships.spouse ?? "Noid",relationshipTitle: "SPOUSE")
                         }
-                        Spacer(minLength: 10)
                         
+                        Spacer(minLength: 10)
                         
                         // Children
                         VStack{
@@ -72,6 +69,8 @@ struct PersonDetailsView: View {
                         }
                     }.padding(10)
                 }
+                .navigationTitle(person.fullName)
+                .navigationBarTitleDisplayMode(.inline)
             }
         }
     }

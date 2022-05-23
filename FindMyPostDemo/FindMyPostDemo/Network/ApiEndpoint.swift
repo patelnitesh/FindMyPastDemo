@@ -66,7 +66,7 @@ extension APIError: LocalizedError {
         case .errorCode(let code):
             return "\(code) - Something went wrong"
         case .noProfilesUser(let user):
-            return "Failed to retrieve Profiles for \"\(user)\""
+            return "Our server failed to retrieve profiles for \"\(user)\""
         case .unknown:
             return "The error is unknown"
         }

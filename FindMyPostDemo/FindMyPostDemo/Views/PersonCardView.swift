@@ -49,6 +49,8 @@ struct PersonCardView: View {
                     .cornerRadius(10)
                     .overlay(RoundedRectangle(cornerRadius: 10)
                         .stroke(isSelected ? .blue : .black, lineWidth: 3))
+                } else {
+                    EmptyView()
                 }
             }
         }

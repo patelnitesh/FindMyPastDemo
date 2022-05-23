@@ -28,7 +28,7 @@ struct ErrorView: View {
                 .font(.system(size: 50, weight: .heavy))
             Text("Ooops...")
                 .font(.system(size: 30, weight: .heavy))
-            Text(error.localizedDescription)
+            Text(error.toEquatableError().localizedDescription)
                 .font(.system(size: 15, weight: .regular))
                 .foregroundColor(.gray)
                 .multilineTextAlignment(.center)

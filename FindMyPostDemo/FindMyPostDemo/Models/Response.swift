@@ -33,7 +33,7 @@ struct Relationships: Codable {
     let children: [String]?
 }
 
-extension Person{
+extension Person {
     
     var fullName: String {
         [firstname ?? "No First name", surname ?? "No Surname"].joined(separator: " ")

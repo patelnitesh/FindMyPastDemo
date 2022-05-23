@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11C3E3B7283BA320009A0DD8 /* ProfilesViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C3E3B6283BA320009A0DD8 /* ProfilesViewModelTests.swift */; };
+		11C3E3B9283BA383009A0DD8 /* MockApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C3E3B8283BA383009A0DD8 /* MockApiService.swift */; };
+		11C3E3BC283BA5AC009A0DD8 /* Bundle+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C3E3BB283BA5AC009A0DD8 /* Bundle+Extensions.swift */; };
+		11C3E3BF283BA631009A0DD8 /* Profiles.json in Resources */ = {isa = PBXBuildFile; fileRef = 11C3E3BE283BA631009A0DD8 /* Profiles.json */; };
+		11C3E3C0283BC4F8009A0DD8 /* Profiles.json in Resources */ = {isa = PBXBuildFile; fileRef = 11C3E3BE283BA631009A0DD8 /* Profiles.json */; };
+		11C3E3C2283BDA18009A0DD8 /* PersonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C3E3C1283BDA18009A0DD8 /* PersonTests.swift */; };
 		11D4E4F228354DFF00136542 /* FindMyPostDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D4E4F128354DFF00136542 /* FindMyPostDemoApp.swift */; };
 		11D4E4F628354E0100136542 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11D4E4F528354E0100136542 /* Assets.xcassets */; };
 		11D4E4F928354E0100136542 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11D4E4F828354E0100136542 /* Preview Assets.xcassets */; };
@@ -24,7 +30,23 @@
 		11DA76312837E09600EAA761 /* UsernameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DA76302837E09600EAA761 /* UsernameView.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		11C3E3B1283BA2E1009A0DD8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 11D4E4E628354DFF00136542 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 11D4E4ED28354DFF00136542;
+			remoteInfo = FindMyPostDemo;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		11C3E3AD283BA2E1009A0DD8 /* FindMyPostDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FindMyPostDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		11C3E3B6283BA320009A0DD8 /* ProfilesViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilesViewModelTests.swift; sourceTree = "<group>"; };
+		11C3E3B8283BA383009A0DD8 /* MockApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockApiService.swift; sourceTree = "<group>"; };
+		11C3E3BB283BA5AC009A0DD8 /* Bundle+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+Extensions.swift"; sourceTree = "<group>"; };
+		11C3E3BE283BA631009A0DD8 /* Profiles.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Profiles.json; sourceTree = "<group>"; };
+		11C3E3C1283BDA18009A0DD8 /* PersonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTests.swift; sourceTree = "<group>"; };
 		11D4E4EE28354DFF00136542 /* FindMyPostDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindMyPostDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11D4E4F128354DFF00136542 /* FindMyPostDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindMyPostDemoApp.swift; sourceTree = "<group>"; };
 		11D4E4F528354E0100136542 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -44,6 +66,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		11C3E3AA283BA2E1009A0DD8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		11D4E4EB28354DFF00136542 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -54,10 +83,55 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		11C3E3AE283BA2E1009A0DD8 /* FindMyPostDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				11C3E3C4283BDB33009A0DD8 /* Tests */,
+				11C3E3C3283BDB28009A0DD8 /* Mocks */,
+				11C3E3BA283BA593009A0DD8 /* Extensions */,
+			);
+			path = FindMyPostDemoTests;
+			sourceTree = "<group>";
+		};
+		11C3E3BA283BA593009A0DD8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				11C3E3BB283BA5AC009A0DD8 /* Bundle+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		11C3E3BD283BA613009A0DD8 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				11C3E3BE283BA631009A0DD8 /* Profiles.json */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
+		11C3E3C3283BDB28009A0DD8 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				11C3E3B8283BA383009A0DD8 /* MockApiService.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		11C3E3C4283BDB33009A0DD8 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				11C3E3B6283BA320009A0DD8 /* ProfilesViewModelTests.swift */,
+				11C3E3C1283BDA18009A0DD8 /* PersonTests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
 		11D4E4E528354DFF00136542 = {
 			isa = PBXGroup;
 			children = (
 				11D4E4F028354DFF00136542 /* FindMyPostDemo */,
+				11C3E3BD283BA613009A0DD8 /* JSON */,
+				11C3E3AE283BA2E1009A0DD8 /* FindMyPostDemoTests */,
 				11D4E4EF28354DFF00136542 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -66,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				11D4E4EE28354DFF00136542 /* FindMyPostDemo.app */,
+				11C3E3AD283BA2E1009A0DD8 /* FindMyPostDemoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -135,6 +210,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		11C3E3AC283BA2E1009A0DD8 /* FindMyPostDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 11C3E3B5283BA2E1009A0DD8 /* Build configuration list for PBXNativeTarget "FindMyPostDemoTests" */;
+			buildPhases = (
+				11C3E3A9283BA2E1009A0DD8 /* Sources */,
+				11C3E3AA283BA2E1009A0DD8 /* Frameworks */,
+				11C3E3AB283BA2E1009A0DD8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				11C3E3B2283BA2E1009A0DD8 /* PBXTargetDependency */,
+			);
+			name = FindMyPostDemoTests;
+			productName = FindMyPostDemoTests;
+			productReference = 11C3E3AD283BA2E1009A0DD8 /* FindMyPostDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		11D4E4ED28354DFF00136542 /* FindMyPostDemo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 11D4E4FC28354E0100136542 /* Build configuration list for PBXNativeTarget "FindMyPostDemo" */;
@@ -162,6 +255,10 @@
 				LastSwiftUpdateCheck = 1330;
 				LastUpgradeCheck = 1330;
 				TargetAttributes = {
+					11C3E3AC283BA2E1009A0DD8 = {
+						CreatedOnToolsVersion = 13.3;
+						TestTargetID = 11D4E4ED28354DFF00136542;
+					};
 					11D4E4ED28354DFF00136542 = {
 						CreatedOnToolsVersion = 13.3;
 					};
@@ -181,16 +278,26 @@
 			projectRoot = "";
 			targets = (
 				11D4E4ED28354DFF00136542 /* FindMyPostDemo */,
+				11C3E3AC283BA2E1009A0DD8 /* FindMyPostDemoTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		11C3E3AB283BA2E1009A0DD8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11C3E3BF283BA631009A0DD8 /* Profiles.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		11D4E4EC28354DFF00136542 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				11D4E4F928354E0100136542 /* Preview Assets.xcassets in Resources */,
+				11C3E3C0283BC4F8009A0DD8 /* Profiles.json in Resources */,
 				11D4E4F628354E0100136542 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -198,6 +305,17 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		11C3E3A9283BA2E1009A0DD8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11C3E3BC283BA5AC009A0DD8 /* Bundle+Extensions.swift in Sources */,
+				11C3E3B9283BA383009A0DD8 /* MockApiService.swift in Sources */,
+				11C3E3C2283BDA18009A0DD8 /* PersonTests.swift in Sources */,
+				11C3E3B7283BA320009A0DD8 /* ProfilesViewModelTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		11D4E4EA28354DFF00136542 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -220,7 +338,49 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		11C3E3B2283BA2E1009A0DD8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 11D4E4ED28354DFF00136542 /* FindMyPostDemo */;
+			targetProxy = 11C3E3B1283BA2E1009A0DD8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		11C3E3B3283BA2E1009A0DD8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nitesh.FindMyPostDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FindMyPostDemo.app/FindMyPostDemo";
+			};
+			name = Debug;
+		};
+		11C3E3B4283BA2E1009A0DD8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nitesh.FindMyPostDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FindMyPostDemo.app/FindMyPostDemo";
+			};
+			name = Release;
+		};
 		11D4E4FA28354E0100136542 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -394,6 +554,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		11C3E3B5283BA2E1009A0DD8 /* Build configuration list for PBXNativeTarget "FindMyPostDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				11C3E3B3283BA2E1009A0DD8 /* Debug */,
+				11C3E3B4283BA2E1009A0DD8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		11D4E4E928354DFF00136542 /* Build configuration list for PBXProject "FindMyPostDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -48,7 +48,9 @@ struct ProfilesView: View {
                         }
                     }
                 }
-            }.refreshable {
+            }
+            .navigationTitle("Profiles")
+            .refreshable {
                 self.viewModel.getProfiles(username: username)
             }
         }
