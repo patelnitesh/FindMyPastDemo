@@ -13,7 +13,7 @@ struct PersonCardView: View {
     let isSelected: Bool
     @ObservedObject var viewModel: PersonViewModel
     
-    init(profileId: String, isSelected:Bool = false,relationshipTitle: String = "") {
+    init(profileId: String, isSelected:Bool = false, relationshipTitle: String = "") {
         self.profileId = profileId
         self.isSelected = isSelected
         self.relationshipTitle = relationshipTitle
@@ -49,8 +49,6 @@ struct PersonCardView: View {
                     .cornerRadius(10)
                     .overlay(RoundedRectangle(cornerRadius: 10)
                         .stroke(isSelected ? .blue : .black, lineWidth: 3))
-                } else {
-                    EmptyView()
                 }
             }
         }

@@ -21,6 +21,7 @@
 		11D4E514283562B200136542 /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D4E513283562B200136542 /* AsyncImageView.swift */; };
 		11D4E516283586CB00136542 /* PersonCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D4E515283586CB00136542 /* PersonCardView.swift */; };
 		11D4E518283586E200136542 /* PersonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D4E517283586E200136542 /* PersonViewModel.swift */; };
+		11DA76312837E09600EAA761 /* UsernameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DA76302837E09600EAA761 /* UsernameView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		11D4E513283562B200136542 /* AsyncImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncImageView.swift; sourceTree = "<group>"; };
 		11D4E515283586CB00136542 /* PersonCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCardView.swift; sourceTree = "<group>"; };
 		11D4E517283586E200136542 /* PersonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonViewModel.swift; sourceTree = "<group>"; };
+		11DA76302837E09600EAA761 /* UsernameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsernameView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				11D4E5092835551A00136542 /* ProfilesView.swift */,
 				11D4E50B2835552700136542 /* PersonDetailsView.swift */,
 				11D4E515283586CB00136542 /* PersonCardView.swift */,
+				11DA76302837E09600EAA761 /* UsernameView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -207,6 +210,7 @@
 				11D4E51228355E4200136542 /* ErrorView.swift in Sources */,
 				11D4E50128354FCD00136542 /* ApiEndpoint.swift in Sources */,
 				11D4E50A2835551A00136542 /* ProfilesView.swift in Sources */,
+				11DA76312837E09600EAA761 /* UsernameView.swift in Sources */,
 				11D4E5062835537800136542 /* Response.swift in Sources */,
 				11D4E518283586E200136542 /* PersonViewModel.swift in Sources */,
 				11D4E516283586CB00136542 /* PersonCardView.swift in Sources */,

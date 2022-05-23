@@ -16,15 +16,15 @@ public class ProfilesViewModel: ObservableObject {
     @Published private(set) var state: ResultState = .loading
     private var cancellable = Set<AnyCancellable>()
 
-    init(service: FindMyPastService) {
+    init(service: FindMyPastService, username: String) {
         self.service = service
-        self.getProfiles()
+        self.getProfiles(username: username)
     }
     
-    func getProfiles() {
+    func getProfiles(username: String) {
         self.state = .loading
         let cancellable = self.service
-            .requestProfiles(from: .getProfiles(userId: "cgriswold"))
+            .requestProfiles(from: .getProfiles(userId: username))
             .sink { (res) in
                 switch res {
                 case .failure(let error):

@@ -11,7 +11,7 @@ import SwiftUI
 struct FindMyPostDemoApp: App {
     var body: some Scene {
         WindowGroup {
-            ProfilesView()
+            UsernameView()
         }
     }
 }

@@ -16,6 +16,18 @@ struct PersonDetailsView: View {
         viewModel = PersonViewModel(service: FMPService(), personId: person.id ?? "_")
     }
     
+    // Experiment
+    fileprivate func drawRelationshipLines() -> some View {
+        return VStack(alignment: .center, spacing: 0) {
+            Spacer(minLength: 200)
+            Rectangle().frame(width: 22, height: 2, alignment: .center)
+                .border(.blue, width: 1)
+            
+            Rectangle().frame(width: 2, height: 200, alignment: .center)
+                .border(.red, width: 1)
+        }
+    }
+    
     var body: some View {
         
         switch viewModel.state {
@@ -24,25 +36,35 @@ struct PersonDetailsView: View {
             Text("can not find relationship")
         case .success:
             if let relationships = viewModel.person.relationships {
-                ScrollView(.vertical, showsIndicators: true) {
+                ScrollView(.vertical, showsIndicators: false) {
+                    
+                    
                     VStack(alignment: .center, spacing: 30) {
                         
                         // Father - Mother
                         HStack(alignment: .center, spacing: 30) {
                             PersonCardView(profileId: relationships.father ?? "Noid",relationshipTitle: "FATHER")
+                            
+                           // drawRelationshipLines()
+
                             PersonCardView(profileId: relationships.mother ?? "Noid", relationshipTitle: "MOTHER")
                         }
+                        Spacer(minLength: 10)
+                        
                         
                         // Main - Spouse
-                        HStack{
+                        HStack(alignment: .center, spacing: 50){
                             // pass isSelected - TRUE for Main Person - Whos tree we are watching
                             PersonCardView(profileId: person.id ?? "_", isSelected: true)
                             PersonCardView(profileId: relationships.spouse ?? "Noid",relationshipTitle: "SPOUSE")
                         }
+                        Spacer(minLength: 10)
+                        
                         
                         // Children
                         VStack{
                             if let children = relationships.children {
+                                Text("CHILDREN")
                                 ForEach(children, id: \.self) { child in
                                     PersonCardView(profileId: child)
                                 }

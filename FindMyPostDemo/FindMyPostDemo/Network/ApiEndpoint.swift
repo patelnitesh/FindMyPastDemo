@@ -54,6 +54,7 @@ extension APIEndPoint: APIBuilder {
 enum APIError: Error {
     case decodingError
     case errorCode(Int)
+    case noProfilesUser(String)
     case unknown
 }
 
@@ -64,6 +65,8 @@ extension APIError: LocalizedError {
             return "Failed to decode the error from the service"
         case .errorCode(let code):
             return "\(code) - Something went wrong"
+        case .noProfilesUser(let user):
+            return "Failed to retrieve Profiles for \"\(user)\""
         case .unknown:
             return "The error is unknown"
         }
